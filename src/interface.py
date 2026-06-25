@@ -1,7 +1,9 @@
 import streamlit as st
 import requests
 
-st.set_page_config(page_title="Previsão de Imóveis", page_icon="🏠︎", layout="centered")
+API_URL = "http://127.0.0.1:8000/prever"
+
+st.set_page_config(page_title="Previsão de Imóveis", layout="centered")
 st.title("Previsão de Preço de Imóveis")
 st.markdown("Preencha as características do imóvel para obter uma estimativa de preço.")
 
@@ -24,8 +26,16 @@ if st.button("Calcular preço", type="primary"):
         "area": area,
         "quartos": quartos,
         "banheiros": banheiros,
-        "garagem": garagem
+        "garagem": garagem,
     }
-    resposta = requests.post("http://127.0.0.1:8000/prever", json=payload)
-    resultado = resposta.json()
-    st.success(f"Preço estimado: **{resultado['preco_previsto']}**")
+    try:
+        resposta = requests.post(API_URL, json=payload, timeout=5)
+        resposta.raise_for_status()
+        resultado = resposta.json()
+        st.success(f"Preço estimado: **{resultado['preco_previsto']}**")
+    except requests.exceptions.ConnectionError:
+        st.error("API offline. Inicie a API com: `uvicorn src.api:app --reload`")
+    except requests.exceptions.HTTPError as e:
+        st.error(f"Erro na API: {e}")
+    except Exception as e:
+        st.error(f"Erro inesperado: {e}")
