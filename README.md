@@ -1,4 +1,4 @@
-# `ML API — Previsão de Preço de Imóveis`
+# `ML API (Previsão de Preço de Imóveis)`
 
 > Modelo de machine learning servido como API REST com FastAPI e interface web com Streamlit.
 
