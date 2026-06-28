@@ -142,6 +142,14 @@ ml-api/
 
 ---
 
+## `Demonstração`
+
+**Interface Streamlit** — sliders para área, quartos, banheiros e vagas; previsão instantânea via API REST ao clicar em "Calcular preço".
+
+![Interface de Previsão](docs/screenshots/interface.png)
+
+---
+
 ## `Licença`
 
 Distribuído sob a licença MIT. Veja [LICENSE](LICENSE) para mais informações.
