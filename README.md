@@ -11,6 +11,7 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.110-green)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.x-red)
 ![joblib](https://img.shields.io/badge/joblib-1.x-gray)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 ---
 
@@ -138,3 +139,19 @@ ml-api/
 - **`FastAPI`**: framework para construir APIs REST com validação automática via Pydantic
 - **`Pydantic`**: valida e documenta os dados de entrada da API automaticamente
 - **`Swagger UI`**: documentação interativa gerada automaticamente pelo FastAPI em `/docs`
+
+---
+
+## `Licença`
+
+Distribuído sob a licença MIT. Veja [LICENSE](LICENSE) para mais informações.
+
+---
+
+## `Autor`
+
+**Arthur Baptista dos Santos**
+RM 565346 — Inteligência Artificial · FIAP 2025–2026
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Arthur%20Baptista-0077B5?logo=linkedin)](https://linkedin.com/in/arthur-baptista-dos-santos)
+[![GitHub](https://img.shields.io/badge/GitHub-Arthur--Baptista--dos--Santos-181717?logo=github)](https://github.com/Arthur-Baptista-dos-Santos)
